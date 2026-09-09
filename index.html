@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cumming Beer | Cumming Brewing Co.</title>
+<meta name="description" content="Cumming Beer Co. Small-batch cans brewed for the town of Cumming, Iowa. Bike Trail Citrus Wheat, All Hat No Cattle Coffee Stout, All Clucked Up IPA, and the Cumming American Lager.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Rye&family=Oswald:wght@500;600;700&family=PT+Sans:wght@400;700&family=Space+Mono:wght@400;700&family=Jost:wght@500&family=Caveat:wght@600;700&display=swap">
+</head>
+<body>
+
+<div class="age-gate" id="ageGate">
+  <div class="age-card" id="ageCard">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3c2.8 0 4.5 2 4.5 5.5S14.8 15 12 15s-4.5-2-4.5-6.5S9.2 3 12 3z"/><path d="M12 15v6M9 8.5h6M9 11.5h6M8.5 18h7"/></svg>
+    <p class="eb">Cumming Brewing Co.</p>
+    <h3 id="ageHeadline">Are you 21 or older?</h3>
+    <p id="ageBody">You need to be of legal drinking age to visit this site.</p>
+    <div class="ag-actions" id="ageActions">
+      <button class="ag-btn" id="ageNo">No</button>
+      <button class="ag-btn primary" id="ageYes">Yes, I'm 21+</button>
+    </div>
+  </div>
+</div>
+
+<nav>
+  <div class="nav-row">
+    <a class="brand" href="#top"><img src="images/logo-nav.png" alt="Cumming Beer"></a>
+    <ul class="nav-links">
+      <li><a href="#beers">Beers</a></li>
+      <li><a href="#represent">Represent</a></li>
+      <li><a href="#find-us">Find Us</a></li>
+      <li><a href="#news">eNews</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div id="top" class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow"><span>Cumming Brewing Co. · Cumming, Iowa</span></p>
+    <h1>Cumming.<br>Say It.</h1>
+    <p class="tagline">Enjoy the taste.</p>
+    <p class="desc">Four beers, one very memorable town. Brewed for the people who already know exactly where Cumming, Iowa is, and the ones who are about to find out.</p>
+    <div class="hero-ctas">
+      <a class="btn solid" href="#beers">See The Beers</a>
+      <a class="btn outline" href="#find-us">Find Us</a>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <img src="images/hero-photo.jpg" alt="Holding a can of Bike Trail Citrus Wheat up against an Iowa cornfield">
+    <p class="cap">Bike Trail, out on the trail</p>
+  </div>
+</div>
+<section id="beers">
+  <div class="wrap">
+    <p class="eyebrow">The Lineup</p>
+    <h2 class="head">Four Beers, No Filler</h2>
+    <p class="lede" style="max-width:70ch;">Tap a can for the full pour: style, ABV, and what it's actually like to drink.</p>
+
+    <div class="beer-grid">
+      <button class="beer-card beer-card--free" data-beer="wheat" style="--accent:#E1731D;">
+        <div class="beer-visual"><img src="images/can-bike-trail.webp" alt="Bike Trail Citrus Wheat can, photorealistic mockup"></div>
+        <div class="beer-info">
+          <p class="style">Citrus Wheat</p>
+          <p class="name">Bike Trail</p>
+          <p class="abv">5.5% ABV</p>
+        </div>
+      </button>
+
+      <button class="beer-card beer-card--free" data-beer="stout" style="--accent:#3A7088;">
+        <div class="beer-visual"><img src="images/can-all-hat-no-cattle.webp" alt="All Hat, No Cattle Coffee Stout can, photorealistic mockup"></div>
+        <div class="beer-info">
+          <p class="style">Coffee Stout</p>
+          <p class="name">All Hat, No Cattle</p>
+          <p class="abv">5% ABV</p>
+        </div>
+      </button>
+
+      <button class="beer-card beer-card--free" data-beer="ipa" style="--accent:#D6841F;">
+        <div class="beer-visual"><img src="images/can-all-clucked-up.webp" alt="All Clucked Up IPA can, photorealistic mockup"></div>
+        <div class="beer-info">
+          <p class="style">India Pale Ale</p>
+          <p class="name">All Clucked Up</p>
+          <p class="abv">6.5% ABV</p>
+        </div>
+      </button>
+
+      <button class="beer-card beer-card--free" data-beer="lager" style="--accent:#9F741E;">
+        <div class="beer-visual"><img src="images/can-cumming-lager.webp" alt="Cumming American Lager can, photorealistic mockup"></div>
+        <div class="beer-info">
+          <p class="style">American Lager</p>
+          <p class="name">Cumming</p>
+          <p class="abv">5.5% ABV</p>
+        </div>
+      </button>
+    </div>
+  </div>
+</section>
+
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal">
+    <div class="modal-hero" id="modalHero">
+      <img id="modalImg" src="" alt="">
+    </div>
+    <div class="modal-body" id="modalBody">
+      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+      <p class="style" id="modalStyle"></p>
+      <h3 id="modalName"></h3>
+      <p class="abv" id="modalAbv"></p>
+      <p class="desc" id="modalDesc"></p>
+    </div>
+  </div>
+</div>
+<section id="represent" class="represent">
+  <div class="wrap rep-row">
+    <div>
+      <p class="eyebrow">Cumming, Iowa · Est. at Middlebrook</p>
+      <h2 class="head">Proud To Represent Cumming, Iowa</h2>
+      <p class="lede">Cumming Beer is brewed for this town, not just named after it. Every can carries a piece of it: the water tower, the old schoolhouse, the Great Western Trail, the farms and fields that have always been here.</p>
+      <p class="lede">Cumming isn't stuck in the past, though. It's growing into what comes next, and agriculture and community are still at the center of it. There's Middlebrook, Iowa's first agrihood: working farms, walking trails, front porches, places to gather. Friday nights at the Farm. Coffee and cocktails at the Mercantile. Spirits at the distillery. 70+ acres of orchard and polyculture farmland out at Wilson's, with cider and wood-fired pizza to go with it.</p>
+      <p class="lede">Small-town Iowa, with a little momentum behind it. We're proud to make its beer.</p>
+      <a class="btn solid" href="#find-us">Where To Find It</a>
+    </div>
+    <div class="rep-photos">
+      <img src="images/cumming-water-tower.webp" alt="The painted Cumming water tower against a blue sky">
+      <img src="images/Farm-to-Table-Dinner-Chefs.jpg" alt="Chefs plating a farm-to-table dinner in the fields at Middlebrook">
+      <img src="images/kids-and-barn-smaller.jpg" alt="Kids walking past the Middlebrook barn">
+    </div>
+  </div>
+</section>
+
+<div class="photo-band">
+  <img src="images/photo-band-chickens.jpg" alt="A can of All Clucked Up lying in the grass surrounded by curious chickens">
+</div>
+<div class="photo-band photo-band-pair">
+  <div class="photo-band-cell">
+    <img src="images/CZP_3467_(2048).jpg" alt="Laughing woman holding a chicken and a can of All Clucked Up at the coop">
+    <span class="photo-band-caption">All Clucked Up, at the coop</span>
+  </div>
+  <div class="photo-band-cell">
+    <img src="images/CZP_0081-2.jpg" alt="Bike Trail tap handle on the bar next to the Wilson's Orchard tap">
+    <span class="photo-band-caption">Bike Trail, on tap</span>
+  </div>
+</div>
+
+<section class="roads">
+  <div class="wrap">
+    <p class="eyebrow">Yes, It's Really Called That</p>
+    <h2 class="head">All Roads Lead to Cumming</h2>
+    <p class="lede">You're not the first person to slow down for the road sign. Turns out there's more than one of us out there. We're the small-town, agrihood-and-farms version, not the sprawling Atlanta-suburb one.</p>
+    <div class="sign-post">
+      <div class="sign"><span>Des Moines, IA</span><span class="mi">18 MI</span></div>
+      <div class="sign"><span>Norwalk, IA</span><span class="mi">7 MI</span></div>
+      <div class="sign"><span>West Des Moines, IA</span><span class="mi">10 MI</span></div>
+      <div class="sign"><span>Bettendorf, IA</span><span class="mi">175 MI</span></div>
+      <div class="sign"><span>Cumming, GA</span><span class="mi">905 MI</span></div>
+      <div class="sign"><span>Cumming Township, MI</span><span class="mi">590 MI</span></div>
+      <div class="post"></div>
+    </div>
+  </div>
+</section>
+
+<section id="find-us">
+  <div class="wrap">
+    <p class="eyebrow">Where To Find It</p>
+    <h2 class="head">Come Say Hi</h2>
+    <p class="lede" style="max-width:70ch;">No storefront of our own yet. You'll find us out where the town already gathers.</p>
+    <div class="find-grid">
+      <a class="find-card" href="http://middlebrookmercantile.com/" target="_blank" rel="noopener">
+        <img src="images/Middlebrook-Mercantile.jpg" alt="The Middlebrook Mercantile building at dusk">
+        <div class="find-body">
+          <p class="tag">Year-round</p>
+          <h3>Middlebrook Mercantile</h3>
+          <p>Our home port in Cumming. On tap and in cans. Cumming's original one-room schoolhouse, retrofitted as a wine and cocktail bar buzzing with music, trivia, good drinks, and community all week long.</p>
+        </div>
+      </a>
+      <a class="find-card" href="https://middlebrookfarm.com/event" target="_blank" rel="noopener">
+        <img src="images/KGamble-2079.jpg" alt="Crowd gathered at Fridays at the Farm at Middlebrook">
+        <div class="find-body">
+          <p class="tag">Seasonal · May – Sept</p>
+          <h3>Fridays at the Farm</h3>
+          <p>Every Friday through the warm months. Bring a chair or blanket, grab a cold beer from the Beer Tent, and settle in front of the farmhouse for live music. Or wander the farm, take in the fields, and make an evening of it.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="ig-head">
+      <div>
+        <p class="eyebrow" style="margin-bottom:4px;"><span>Follow Along</span></p>
+        <h2 class="head" style="margin:0;">On Instagram</h2>
+      </div>
+      <a class="ig-handle" href="https://www.instagram.com/cummingbeer" target="_blank" rel="noopener">@cummingbeer &#8599;</a>
+    </div>
+  </div>
+  <div class="ig-embed-frame">
+    <div class="sk-instagram-feed" data-embed-id="25710880"></div>
+    <script src="https://widgets.sociablekit.com/instagram-feed/widget.js" defer></script>
+  </div>
+</section>
+
+
+<section id="news">
+  <div class="wrap two-col">
+    <div class="panel">
+      <h3>Never Miss a Batch</h3>
+      <p>New releases straight to your inbox.</p>
+      <form class="enews-form" id="enewsForm" action="https://formsubmit.co/Info@CummingBeer.com" method="POST">
+        <input type="hidden" name="_subject" value="New Cumming Beer eNews signup">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="enews-row">
+          <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="form-status" id="enewsStatus"></p>
+      </form>
+    </div>
+    <div class="panel">
+      <h3>Want It On Tap?</h3>
+      <p>Bars, restaurants, and events: reach out about carrying Cumming Beer.</p>
+      <p class="order-contact">Contact: <a href="mailto:Info@CummingBeer.com">Info@CummingBeer.com</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-row">
+      <div class="foot-brand">
+        <img src="images/logo-hop-mark.png" alt="Cumming Beer Co. hop mark">
+        <span>Cumming Beer Co.</span>
+      </div>
+      <ul class="foot-links">
+        <li><a href="https://www.instagram.com/cummingbeer" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://untappd.com/CummingBeerLLC" target="_blank" rel="noopener">Untappd</a></li>
+      </ul>
+    </div>
+    <p class="foot-copy">Cumming Beer Co. Please enjoy responsibly. Not brewed on-site; produced by Adventurous Brewing, Bettendorf, IA.</p>
+  </div>
+</footer>
+
+<script src="js/script.js" defer></script>
+</body>
+</html>
