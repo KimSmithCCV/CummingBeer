@@ -3,16 +3,59 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cumming Beer | Cumming Brewing Co.</title>
-<meta name="description" content="Cumming Beer Co. Small-batch cans brewed for the town of Cumming, Iowa. Bike Trail Citrus Wheat, All Hat No Cattle Coffee Stout, All Clucked Up IPA, and the Cumming American Lager.">
+<title>Cumming Beer | Enjoy the Taste | Cumming, IA</title>
+<meta name="description" content="Small-batch craft beer brewed for one very memorable town and the people who already know exactly where Cumming, Iowa is, and the ones who are about to find out.">
+<link rel="canonical" href="https://cummingbeer.com/">
+<meta name="theme-color" content="#04141F">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/favicon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cumming Beer Co.">
+<meta property="og:title" content="Cumming Beer | Enjoy the Taste | Cumming, IA">
+<meta property="og:description" content="Small-batch craft beer brewed for one very memorable town and the people who already know exactly where Cumming, Iowa is, and the ones who are about to find out.">
+<meta property="og:url" content="https://cummingbeer.com/">
+<meta property="og:image" content="https://cummingbeer.com/images/hero-photo.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cumming Beer | Enjoy the Taste | Cumming, IA">
+<meta name="twitter:description" content="Small-batch craft beer brewed for one very memorable town and the people who already know exactly where Cumming, Iowa is, and the ones who are about to find out.">
+<meta name="twitter:image" content="https://cummingbeer.com/images/hero-photo.jpg">
+
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Rye&family=Oswald:wght@500;600;700&family=PT+Sans:wght@400;700&family=Space+Mono:wght@400;700&family=Jost:wght@500&family=Caveat:wght@600;700&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Cumming Beer Co.",
+  "url": "https://cummingbeer.com/",
+  "logo": "https://cummingbeer.com/images/logo-nav.png",
+  "description": "Small-batch craft beer brewed for the town of Cumming, Iowa. Exclusively available at the Middlebrook Mercantile and Fridays at the Farm.",
+  "slogan": "Enjoy the Taste",
+  "sameAs": [
+    "https://www.instagram.com/cummingbeer",
+    "https://untappd.com/CummingBeerLLC"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Cumming",
+    "addressRegion": "IA",
+    "addressCountry": "US"
+  },
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Cumming American Lager", "category": "Beer" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Bike Trail Citrus Wheat", "category": "Beer" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "All Hat, No Cattle Coffee Stout", "category": "Beer" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "All Clucked Up IPA", "category": "Beer" } }
+  ]
+}
+</script>
 </head>
 <body>
 
 <div class="age-gate" id="ageGate">
   <div class="age-card" id="ageCard">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3c2.8 0 4.5 2 4.5 5.5S14.8 15 12 15s-4.5-2-4.5-6.5S9.2 3 12 3z"/><path d="M12 15v6M9 8.5h6M9 11.5h6M8.5 18h7"/></svg>
+    <img class="age-card-art" src="images/All-Hat-Guy-White.webp" alt="">
     <p class="eb">Cumming Brewing Co.</p>
     <h3 id="ageHeadline">Are you 21 or older?</h3>
     <p id="ageBody">You need to be of legal drinking age to visit this site.</p>
@@ -25,7 +68,10 @@
 
 <nav>
   <div class="nav-row">
-    <a class="brand" href="#top"><img src="images/logo-nav.png" alt="Cumming Beer"></a>
+    <a class="brand" href="#top">
+      <img src="images/logo-nav.png" alt="Cumming Beer">
+      <span class="brand-tagline">Enjoy the Taste</span>
+    </a>
     <ul class="nav-links">
       <li><a href="#beers">Beers</a></li>
       <li><a href="#represent">Represent</a></li>
@@ -38,9 +84,9 @@
 <div id="top" class="hero">
   <div class="hero-copy">
     <p class="eyebrow"><span>Cumming Brewing Co. · Cumming, Iowa</span></p>
-    <h1>Cumming.<br>Say It.</h1>
+    <h1>Cumming.<br>Say It.<span class="sr-only"> Small-batch craft beer, brewed in Cumming, Iowa.</span></h1>
     <p class="tagline">Enjoy the taste.</p>
-    <p class="desc">Four beers, one very memorable town. Brewed for the people who already know exactly where Cumming, Iowa is, and the ones who are about to find out.</p>
+    <p class="desc">Four beers, one very memorable town. Brewed for the people who already know exactly where Cumming, Iowa is, and the ones who are about to find out. Exclusively available at the Middlebrook Mercantile and Fridays at the Farm.</p>
     <div class="hero-ctas">
       <a class="btn solid" href="#beers">See The Beers</a>
       <a class="btn outline" href="#find-us">Find Us</a>
@@ -58,6 +104,15 @@
     <p class="lede" style="max-width:70ch;">Tap a can for the full pour: style, ABV, and what it's actually like to drink.</p>
 
     <div class="beer-grid">
+      <button class="beer-card beer-card--free" data-beer="lager" style="--accent:#9F741E;">
+        <div class="beer-visual"><img src="images/can-cumming-lager.webp" alt="Cumming American Lager can, photorealistic mockup"></div>
+        <div class="beer-info">
+          <p class="style">American Lager</p>
+          <p class="name">Cumming</p>
+          <p class="abv">5.5% ABV</p>
+        </div>
+      </button>
+
       <button class="beer-card beer-card--free" data-beer="wheat" style="--accent:#E1731D;">
         <div class="beer-visual"><img src="images/can-bike-trail.webp" alt="Bike Trail Citrus Wheat can, photorealistic mockup"></div>
         <div class="beer-info">
@@ -84,15 +139,6 @@
           <p class="abv">6.5% ABV</p>
         </div>
       </button>
-
-      <button class="beer-card beer-card--free" data-beer="lager" style="--accent:#9F741E;">
-        <div class="beer-visual"><img src="images/can-cumming-lager.webp" alt="Cumming American Lager can, photorealistic mockup"></div>
-        <div class="beer-info">
-          <p class="style">American Lager</p>
-          <p class="name">Cumming</p>
-          <p class="abv">5.5% ABV</p>
-        </div>
-      </button>
     </div>
   </div>
 </section>
@@ -117,7 +163,7 @@
       <p class="eyebrow">Cumming, Iowa · Est. at Middlebrook</p>
       <h2 class="head">Proud To Represent Cumming, Iowa</h2>
       <p class="lede">Cumming Beer is brewed for this town, not just named after it. Every can carries a piece of it: the water tower, the old schoolhouse, the Great Western Trail, the farms and fields that have always been here.</p>
-      <p class="lede">Cumming isn't stuck in the past, though. It's growing into what comes next, and agriculture and community are still at the center of it. There's Middlebrook, Iowa's first agrihood: working farms, walking trails, front porches, places to gather. Friday nights at the Farm. Coffee and cocktails at the Mercantile. Spirits at the distillery. 70+ acres of orchard and polyculture farmland out at Wilson's, with cider and wood-fired pizza to go with it.</p>
+      <p class="lede">Cumming isn't stuck in the past, though. It's growing into what comes next, and agriculture and community are still at the center of it. There's <a href="https://middlebrookfarm.com/" target="_blank" rel="noopener">Middlebrook</a>, Iowa's first agrihood: working farms, walking trails, front porches, places to gather. Friday nights at the Farm. Coffee and cocktails at the Mercantile. Spirits at the distillery. 70+ acres of orchard and polyculture farmland out at Wilson's, with cider and wood-fired pizza to go with it.</p>
       <p class="lede">Small-town Iowa, with a little momentum behind it. We're proud to make its beer.</p>
       <a class="btn solid" href="#find-us">Where To Find It</a>
     </div>
@@ -164,7 +210,7 @@
   <div class="wrap">
     <p class="eyebrow">Where To Find It</p>
     <h2 class="head">Come Say Hi</h2>
-    <p class="lede" style="max-width:70ch;">No storefront of our own yet. You'll find us out where the town already gathers.</p>
+    <p class="lede" style="max-width:58ch;text-wrap:balance;">No storefront of our own yet. Cumming Beer is exclusively available in Cumming, Iowa: you'll find us out where the town already gathers.</p>
     <div class="find-grid">
       <a class="find-card" href="http://middlebrookmercantile.com/" target="_blank" rel="noopener">
         <img src="images/Middlebrook-Mercantile.jpg" alt="The Middlebrook Mercantile building at dusk">
@@ -220,8 +266,8 @@
       </form>
     </div>
     <div class="panel">
-      <h3>Want It On Tap?</h3>
-      <p>Bars, restaurants, and events: reach out about carrying Cumming Beer.</p>
+      <h3>Questions?</h3>
+      <p>We're growing. Got questions about our beer, or our brand? Send us an email.</p>
       <p class="order-contact">Contact: <a href="mailto:Info@CummingBeer.com">Info@CummingBeer.com</a></p>
     </div>
   </div>
@@ -231,15 +277,15 @@
   <div class="wrap">
     <div class="foot-row">
       <div class="foot-brand">
-        <img src="images/logo-hop-mark.png" alt="Cumming Beer Co. hop mark">
-        <span>Cumming Beer Co.</span>
+        <img src="images/logo-nav.png" alt="Cumming Beer Co.">
+        <span class="foot-tagline">Enjoy the Taste</span>
       </div>
       <ul class="foot-links">
         <li><a href="https://www.instagram.com/cummingbeer" target="_blank" rel="noopener">Instagram</a></li>
         <li><a href="https://untappd.com/CummingBeerLLC" target="_blank" rel="noopener">Untappd</a></li>
       </ul>
     </div>
-    <p class="foot-copy">Cumming Beer Co. Please enjoy responsibly. Not brewed on-site; produced by Adventurous Brewing, Bettendorf, IA.</p>
+    <p class="foot-copy">Cumming Beer Co. Please enjoy responsibly.</p>
   </div>
 </footer>
 
