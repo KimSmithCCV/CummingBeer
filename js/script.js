@@ -7,8 +7,25 @@
   function getStored(){ try { return localStorage.getItem(STORE_KEY); } catch(e){ return null; } }
   function setStored(v){ try { localStorage.setItem(STORE_KEY, v); } catch(e){} }
   if (getStored() === 'yes'){ gate.hidden = true; } else { document.documentElement.style.overflow = 'hidden'; }
+
+  // ---- Cookie notice ----
+  var COOKIE_KEY = 'cb_cookie_ack';
+  var cookieNote = document.getElementById('cookieNote');
+  function showCookieNote(){
+    if (!cookieNote) return;
+    try { if (localStorage.getItem(COOKIE_KEY) === 'yes') return; } catch(e){}
+    cookieNote.hidden = false;
+  }
+  if (cookieNote){
+    document.getElementById('cookieOk').addEventListener('click', function(){
+      try { localStorage.setItem(COOKIE_KEY, 'yes'); } catch(e){}
+      cookieNote.hidden = true;
+    });
+  }
+  if (getStored() === 'yes') showCookieNote();
   document.getElementById('ageYes').addEventListener('click', function(){
     setStored('yes'); gate.hidden = true; document.documentElement.style.overflow = '';
+    showCookieNote();
   });
   document.getElementById('ageNo').addEventListener('click', function(){
     setStored('no'); card.classList.add('declined');
